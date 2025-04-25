@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pasarela_compras</title>
+    <link rel="stylesheet" href="css/tylePasarela.css">
+
+    
+</head>
+<body>
+    <div class="cart-container">
+        <h1>Carrito de Compras</h1>
+
+        <div class="cart-item">
+            <h3>Camiseta de algodón</h3>
+            <p>Camiseta de algodón suave y cómoda</p>
+            <p class="price">$19.99</p>
+            <p>Cantidad: 2</p>
+        </div>
+
+        <div class="cart-item">
+            <h3>Pantalones vaqueros</h3>
+            <p>Pantalones vaqueros de corte slim</p>
+            <p class="price">$39.99</p>
+            <p>Cantidad: 1</p>
+        </div>
+
+        <div class="cart-item">
+            <h3>Zapatos deportivos</h3>
+            <p>Zapatos deportivos con amortiguación</p>
+            <p class="price">$49.99</p>
+            <p>Cantidad: 1</p>
+        </div>
+
+        <div class="total">
+            <h3>Total: $129.96</h3>
+        </div>
+
+        <div class="shipping-info">
+            <h3>Información de envío</h3>
+            <form>
+                <label for="name">Nombre:</label>
+                <input type="text" id="name" name="name" required>
+
+                <label for="address">Dirección:</label>
+                <input type="text" id="address" name="address" required>
+
+                <label for="city">Ciudad:</label>
+                <input type="text" id="city" name="city" required>
+
+                <label for="state">Estado:</label>
+                <input type="text" id="state" name="state" required>
+
+                <label for="zipcode">Código postal:</label>
+                <input type="text" id="zipcode" name="zipcode" required>
+
+                <label for="country">País:</label>
+                <input type="text" id="country" name="country" required>
+            </form>
+        </div>
+
+        <div class="payment-method">
+            <h3>Método de pago</h3>
+            <label><input type="radio" name="payment" value="credit-card"> Tarjeta de crédito</label><br>
+            <label><input type="radio" name="payment" value="paypal"> PayPal</label><br>
+            <label><input type="radio" name="payment" value="cash-on-delivery"> Pago contra entrega</label>
+        </div>
+
+        <button class="checkout-btn">Realizar pedido</button>
+    </div>
+</body>
+</html>
