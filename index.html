@@ -1,11 +1,44 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Carrito_de compras</title>
+    <title>Carrito de Compras en Soles</title>
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <h1>implementa</h1>
+
+    <h1>Carrito de Compras</h1>
+
+    <div id="productos">
+        <div class="producto">
+            <img src="https://via.placeholder.com/150" alt="Producto 1">
+            <h3>Producto 1</h3>
+            <p>Precio: S/ 40.00</p>
+            <button onclick="agregarAlCarrito('Producto 1', 'Ideal para tu hogar o oficina, con materiales de alta calidad.', 40.00, 'https://via.placeholder.com/150')">Agregar al carrito</button>
+        </div>
+        <div class="producto">
+            <img src="https://via.placeholder.com/150" alt="Producto 2">
+            <h3>Producto 2</h3>
+            <p>Precio: S/ 80.00</p>
+            <button onclick="agregarAlCarrito('Producto 2', 'Perfecto para quienes buscan calidad y diseño a un buen precio.', 80.00, 'https://via.placeholder.com/150')">Agregar al carrito</button>
+        </div>
+        <div class="producto">
+            <img src="https://via.placeholder.com/150" alt="Producto 3">
+            <h3>Producto 3</h3>
+            <p>Precio: S/ 120.00</p>
+            <button onclick="agregarAlCarrito('Producto 3', 'Con este producto, garantizarás el mejor rendimiento.', 120.00, 'https://via.placeholder.com/150')">Agregar al carrito</button>
+        </div>
+    </div>
+
+    <div id="carrito">
+        <h2>Carrito de Compras</h2>
+        <ul id="lista-carrito"></ul>
+        <p>Total: S/ <span id="total">0.00</span></p>
+        <button onclick="vaciarCarrito()">Vaciar Carrito</button>
+        <button onclick="comprar()">Comprar</button>
+    </div>
+
+    <script src="script.js"></script>
 </body>
 </html>
