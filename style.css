@@ -146,3 +146,274 @@ footer {
 .blog-producto a:hover {
 	background-color: #d81b60;
 }
+/* Fuente base y reset */
+body {
+    font-family: 'Montserrat', sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f4f4f4;
+    color: #222;
+}
+
+/* Contenedor */
+.container {
+    width: 90%;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+/* Header */
+.main-header {
+    background-color: #1e1e1e;
+    color: #f9f9f9;
+    padding: 30px 0;
+    text-align: center;
+    border-bottom: 3px solid #d4af37;
+}
+
+.main-header h1 {
+    font-size: 2.8rem;
+    margin: 0;
+    letter-spacing: 1px;
+}
+
+/* Navegación */
+.main-nav {
+    background-color: #2c2c2c;
+}
+
+.nav-list {
+    display: flex;
+    justify-content: center;
+    list-style: none;
+    margin: 0;
+    padding: 10px 0;
+    gap: 40px;
+}
+
+.nav-list a {
+    color: #f0e6d2;
+    text-decoration: none;
+    font-weight: 600;
+    font-size: 1rem;
+    transition: color 0.3s ease;
+}
+
+.nav-list a:hover {
+    color: #d4af37;
+}
+
+/* Historia */
+.historia {
+    background-color: #fff;
+    padding: 50px 0;
+    text-align: center;
+}
+
+.historia h2 {
+    color: #1e1e1e;
+}
+
+.historia p {
+    max-width: 800px;
+    margin: 20px auto 0;
+    font-size: 1.1rem;
+    line-height: 1.8;
+}
+
+/* Sección Más Vendidos */
+.mas-vendidos {
+    background-color: #fdfcf8;
+    padding: 60px 0;
+}
+
+.mas-vendidos h2 {
+    text-align: center;
+    margin-bottom: 40px;
+    color: #1e1e1e;
+}
+
+.productos-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+    gap: 30px;
+}
+
+.producto {
+    background: #ffffff;
+    border-radius: 10px;
+    box-shadow: 0 4px 20px rgba(0,0,0,0.05);
+    padding: 20px;
+    text-align: center;
+    transition: transform 0.3s ease;
+}
+
+.producto:hover {
+    transform: translateY(-5px);
+}
+
+.producto img {
+    width: 100%;
+    border-radius: 10px;
+    margin-bottom: 15px;
+}
+
+.precio {
+    font-weight: bold;
+    color: #d4af37;
+    font-size: 1.2rem;
+}
+
+.btn-comprar {
+    display: inline-block;
+    margin-top: 10px;
+    padding: 10px 20px;
+    background-color: #1e1e1e;
+    color: #fff;
+    border-radius: 30px;
+    text-decoration: none;
+    font-weight: 600;
+    transition: background 0.3s ease;
+}
+
+.btn-comprar:hover {
+    background-color: #d4af37;
+    color: #1e1e1e;
+}
+
+/* Nuevos lanzamientos */
+.nuevos {
+    background-color: #fff;
+    padding: 60px 0;
+}
+
+.nuevos h2 {
+    text-align: center;
+    margin-bottom: 50px;
+    color: #1e1e1e;
+}
+
+.blog-producto {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 30px;
+    margin-bottom: 60px;
+    background: #f9f9f9;
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 4px 20px rgba(0,0,0,0.03);
+}
+
+.blog-producto img {
+    width: 100%;
+    max-width: 400px;
+    object-fit: cover;
+    flex: 1;
+}
+
+.contenido {
+    flex: 1;
+    padding: 25px;
+    line-height: 1.8;
+}
+
+.contenido h3 {
+    color: #1e1e1e;
+    margin-top: 0;
+}
+
+.contenido p {
+    color: #333;
+    margin-bottom: 20px;
+}
+
+.contenido .btn-comprar {
+    margin-top: 10px;
+}
+
+/* Mi cuenta */
+.mi-cuenta {
+    background-color: #f4f4f4;
+    padding: 50px 0;
+    text-align: center;
+}
+
+.mi-cuenta h2 {
+    margin-bottom: 20px;
+}
+
+.mi-cuenta ul {
+    list-style: none;
+    padding: 0;
+}
+
+.mi-cuenta li {
+    margin: 10px 0;
+}
+
+.mi-cuenta a {
+    color: #1e1e1e;
+    text-decoration: none;
+    font-weight: 600;
+}
+
+.mi-cuenta a:hover {
+    color: #d4af37;
+}
+
+/* Footer */
+.footer {
+    background-color: #1e1e1e;
+    color: #f9f9f9;
+    padding: 20px 0;
+    text-align: center;
+    font-size: 0.9rem;
+}
+
+/* Responsivo */
+@media (max-width: 768px) {
+    .blog-producto {
+        flex-direction: column;
+    }
+
+    .nav-list {
+        flex-direction: column;
+        gap: 15px;
+    }
+}
+.contacto-header {
+    color: #f9f9f9;
+    font-size: 1rem;
+    margin-top: 10px;
+}
+
+.contacto-header a {
+    color: #f9f9f9;
+    text-decoration: none;
+    font-weight: 600;
+}
+
+.contacto-header a:hover {
+    color: #d4af37; /* Se pone doradito cuando pasas el mouse */
+}
+.contacto-header i {
+    color: #25D366; /* Color verde oficial de WhatsApp */
+    margin-right: 5px;
+}
+.descubre-zapatillas {
+    background-color: #fdfcf8;
+    padding: 50px 0;
+    text-align: center;
+    margin-top: 40px; 
+}
+
+.descubre-zapatillas h2 {
+    color: #1e1e1e;
+    margin-bottom: 20px;
+}
+
+.descubre-zapatillas p {
+    margin-bottom: 50px;
+    color: #333;
+    font-size: 1.1rem;
+}
