@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cesta de Compras</title>
+    <link rel="stylesheet" href="../../css/jordyStyle.css">
+</head>
+
+<body>
+    <h1>CARRITO DE COMPRAS 🛒</h1><br>
+
+    <div class="contenedor">
+        <div class="cesta">
+            <h1>Cesta (<span id="total-items">2</span>)</h1>
+            <div class="acciones">
+                <input type="checkbox" id="seleccionar-todo" checked> Seleccionar todos los artículos
+                <button onclick="borrarSeleccionados()">Borrar artículos seleccionados</button>
+            </div>
+
+            <div class="producto" id="producto1">
+                <input type="checkbox" class="checkbox-producto" checked>
+                <img src="https://static.nike.com/a/images/c_limit,w_592,f_auto/t_product_v1/8fc70eeb-984e-46dc-b3f3-153be1d7b67e/air-max-90-zapatillas-QKKhzW.png"
+                    alt="Zapatilla Nike">
+                <div class="producto-info">
+                    <p>Zapatilla Nike Air Max 90</p>
+                    <p>Precio: S/<span class="precio">499.00</span></p>
+                    <div class="cantidad">
+                        <button onclick="cambiarCantidad('producto1', -1)">-</button>
+                        <span id="cantidad-producto1">1</span>
+                        <button onclick="cambiarCantidad('producto1', 1)">+</button>
+                    </div>
+                </div>
+            </div>
+
+            <div class="producto" id="producto2">
+                <input type="checkbox" class="checkbox-producto" checked>
+                <img src="https://static.nike.com/a/images/c_limit,w_592,f_auto/t_product_v1/8ea80d19-2077-48a2-b3f5-6b34794e9f9a/casaca-deportiva.png"
+                    alt="Casaca Deportiva">
+                <div class="producto-info">
+                    <p>Casaca Deportiva Nike Sportswear</p>
+                    <p>Precio: S/<span class="precio">299.00</span></p>
+                    <div class="cantidad">
+                        <button onclick="cambiarCantidad('producto2', -1)">-</button>
+                        <span id="cantidad-producto2">1</span>
+                        <button onclick="cambiarCantidad('producto2', 1)">+</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="resumen">
+            <h2>Resumen</h2>
+            <p>Subtotal: S/<span id="subtotal">798.00</span></p>
+            <p>Envío: Gratis</p>
+            <h3>Estimación total: S/<span id="total">798.00</span></h3>
+            <button class="boton-continuar" onclick="continuar()">Continuar</button>
+
+            <hr class="linea-separadora">
+
+            <div class="paga-con">
+                <h4>Paga con:</h4>
+                <div class="metodos-pago">
+                    <img src="https://upload.wikimedia.org/wikipedia/commons/4/41/Visa_Logo.png" alt="Visa">
+                    <img src="https://upload.wikimedia.org/wikipedia/commons/a/a4/Mastercard_2019_logo.svg"
+                        alt="Mastercard">
+                    <img src="" alt="Paypal">
+                    <img src="" alt="Pago Efectivo">
+
+                </div>
+
+                <hr class="linea-separadora">
+
+                <div class="proteccion-comprador">
+                    <img src="https://cdn-icons-png.flaticon.com/512/3064/3064197.png" alt="Protección del comprador">
+                    <h4>Protección al comprador garantizada</h4>
+                </div><br>
+                <strong>Recibe el reembolso de tu dinero si el articulo no llega o es diferente al de la
+                    descripción.</strong>
+            </div>
+        </div>
+    </div>
+
+    <script src="../../js/scriptJordy.js"></script>
+</body>
+
+</html>

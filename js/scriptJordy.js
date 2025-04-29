@@ -47,5 +47,8 @@ function cambiarCantidad(productoId, cambio) {
   
   function continuar() {
     alert('¡Continuando al pago!');
+    setTimeout(() => {
+      window.location.href = "../pasarela_pagos/pasarela_pagos.html";
+    }, 1000);
   }
   
