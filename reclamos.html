@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ModaStyle - Centro de Reclamos</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+</head>
+<body>
+    <header>
+        <div class="logo">
+            <h1>ModaStyle</h1>
+            <p>Tu estilo, nuestra pasión</p>
+        </div>
+        <nav>
+            <ul>
+                <li><a href="#">Inicio</a></li>
+                <li><a href="#">Productos</a></li>
+                <li><a href="#">Ofertas</a></li>
+                <li><a href="#" class="active">Reclamos</a></li>
+                <li><a href="#">Contacto</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <section class="claims-hero">
+            <div class="hero-content">
+                <h2>Centro de Reclamos</h2>
+                <p>Estamos aquí para ayudarte. Por favor completa el formulario y nos pondremos en contacto contigo en un plazo de 24-48 horas.</p>
+            </div>
+        </section>
+
+        <section class="claims-process">
+            <h3>Nuestro Proceso de Reclamos</h3>
+            <div class="process-steps">
+                <div class="step">
+                    <div class="step-number">1</div>
+                    <h4>Envía tu reclamo</h4>
+                    <p>Completa el formulario con los detalles de tu reclamo.</p>
+                </div>
+                <div class="step">
+                    <div class="step-number">2</div>
+                    <h4>Revisión</h4>
+                    <p>Nuestro equipo revisará tu caso en 24 horas.</p>
+                </div>
+                <div class="step">
+                    <div class="step-number">3</div>
+                    <h4>Solución</h4>
+                    <p>Te contactaremos con una solución personalizada.</p>
+                </div>
+            </div>
+        </section>
+
+        <section class="claims-form">
+            <h3>Formulario de Reclamos</h3>
+            <form id="claimForm">
+                <div class="form-group">
+                    <label for="orderNumber">Número de Pedido*</label>
+                    <input type="text" id="orderNumber" name="orderNumber" required>
+                </div>
+                
+                <div class="form-group">
+                    <label for="claimType">Tipo de Reclamo*</label>
+                    <select id="claimType" name="claimType" required>
+                        <option value="">Seleccione una opción</option>
+                        <option value="damaged">Producto dañado</option>
+                        <option value="wrong">Producto equivocado</option>
+                        <option value="missing">Producto faltante</option>
+                        <option value="quality">Problema de calidad</option>
+                        <option value="other">Otro</option>
+                    </select>
+                </div>
+                
+                <div class="form-group">
+                    <label for="claimDetails">Detalles del Reclamo*</label>
+                    <textarea id="claimDetails" name="claimDetails" rows="5" required></textarea>
+                    <p class="hint">Por favor describe en detalle el problema, incluyendo información sobre el producto afectado.</p>
+                </div>
+                
+                <div class="form-group">
+                    <label for="photos">Adjuntar Fotos (opcional)</label>
+                    <div class="file-upload">
+                        <input type="file" id="photos" name="photos" accept="image/*" multiple>
+                        <label for="photos" class="upload-button">
+                            <i class="fas fa-cloud-upload-alt"></i> Seleccionar archivos
+                        </label>
+                        <span id="fileNames">No se han seleccionado archivos</span>
+                    </div>
+                    <p class="hint">Puedes subir hasta 5 fotos (máx. 2MB cada una)</p>
+                </div>
+                
+                <div class="form-group">
+                    <label for="contactEmail">Correo Electrónico*</label>
+                    <input type="email" id="contactEmail" name="contactEmail" required>
+                </div>
+                
+                <div class="form-group">
+                    <label for="contactPhone">Teléfono de Contacto*</label>
+                    <input type="tel" id="contactPhone" name="contactPhone" required>
+                </div>
+                
+                <div class="form-group checkbox-group">
+                    <input type="checkbox" id="agreeTerms" name="agreeTerms" required>
+                    <label for="agreeTerms">Acepto los <a href="#">términos y condiciones</a> del proceso de reclamos*</label>
+                </div>
+                
+                <button type="submit" class="submit-button">Enviar Reclamo</button>
+            </form>
+        </section>
+
+        <section class="faq-section">
+            <h3>Preguntas Frecuentes</h3>
+            <div class="faq-container">
+                <div class="faq-item">
+                    <div class="faq-question">
+                        <h4>¿Cuánto tiempo tarda la respuesta a mi reclamo?</h4>
+                        <i class="fas fa-chevron-down"></i>
+                    </div>
+                    <div class="faq-answer">
+                        <p>Normalmente respondemos a todos los reclamos dentro de las 24-48 horas hábiles. En casos complejos puede tomar hasta 72 horas.</p>
+                    </div>
+                </div>
+                
+                <div class="faq-item">
+                    <div class="faq-question">
+                        <h4>¿Qué información debo incluir en mi reclamo?</h4>
+                        <i class="fas fa-chevron-down"></i>
+                    </div>
+                    <div class="faq-answer">
+                        <p>Es importante que incluyas el número de pedido, una descripción detallada del problema y, si es posible, fotos que muestren el problema (producto dañado, etiquetas, etc.).</p>
+                    </div>
+                </div>
+                
+                <div class="faq-item">
+                    <div class="faq-question">
+                        <h4>¿Puedo devolver un producto que no cumple con mis expectativas?</h4>
+                        <i class="fas fa-chevron-down"></i>
+                    </div>
+                    <div class="faq-answer">
+                        <p>Sí, aceptamos devoluciones dentro de los 30 días posteriores a la recepción del pedido. El producto debe estar en su estado original, sin usar y con todas las etiquetas.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="footer-content">
+            <div class="footer-section">
+                <h4>ModaStyle</h4>
+                <p>Tienda de ropa online con las últimas tendencias de moda a los mejores precios.</p>
+            </div>
+            <div class="footer-section">
+                <h4>Contacto</h4>
+                <p><i class="fas fa-envelope"></i> contacto@modastyle.com</p>
+                <p><i class="fas fa-phone"></i> +51 934 567 890</p>
+            </div>
+            <div class="footer-section">
+                <h4>Horario de Atención</h4>
+                <p>Lunes a Viernes: 9am - 6pm</p>
+                <p>Sábados: 10am - 2pm</p>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2023 ModaStyle. Todos los derechos reservados.</p>
+        </div>
+    </footer>
+
+    <div id="successModal" class="modal">
+        <div class="modal-content">
+            <span class="close-modal">&times;</span>
+            <div class="modal-icon">
+                <i class="fas fa-check-circle"></i>
+            </div>
+            <h3>¡Reclamo enviado con éxito!</h3>
+            <p>Hemos recibido tu reclamo correctamente. Número de seguimiento: <strong id="claimNumber"></strong></p>
+            <p>Te contactaremos dentro de las próximas 24-48 horas hábiles.</p>
+            <button class="modal-button">Aceptar</button>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
