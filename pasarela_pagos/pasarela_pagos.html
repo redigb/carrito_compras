@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pasarela_compras</title>
+    <link rel="stylesheet" href="../css/tylePasarela.css">
+
+
+</head>
+
+<body>
+    <div class="container">
+        <div class="cart">
+            <div class="item">
+                <img src="https://rockfordpe.vtexassets.com/arquivos/ids/334831-1200-auto?v=638590788113530000&width=1200&height=auto&aspect=true" alt="Pullover" />
+                <div class="details">
+                    <h3>Chaleco Algodón</h3>
+                    <p>S/ 88.00</p>
+                </div>
+                <div class="quantity">
+                    <button onclick="changeQuantity(-1)">-</button>
+                    <span id="qty">8</span>
+                    <button onclick="changeQuantity(1)">+</button>
+                </div>
+                <p class="price" id="item-total">S/ 800.00</p>
+                <button class="delete" onclick="deleteItem()">🗑️</button>
+            </div>
+            <div class="coupon">
+                <input type="text" placeholder="Código de descuento" />
+                <button>Aplicar</button>
+                <button class="update">Actualizar</button>
+            </div>
+        </div>
+
+        <div class="summary">
+            <h2>Resumen de compra</h2>
+            <div class="line"><span>Subtotal</span><span id="subtotal">S/ 800.00</span></div>
+            <div class="line shipping">
+                <span>Envío</span>
+                <div>
+                    <label><input type="radio" name="shipping" value="2.5" checked onchange="updateTotal()" /> Tarifa
+                        fija: S/ 2.50</label><br />
+                    <label><input type="radio" name="shipping" value="1.5" onchange="updateTotal()" /> Retiro local: S/
+                        1.50</label>
+                </div>
+            </div>
+            <div class="line"><span>IGV</span><span id="tax">S/ 144.00</span></div>
+            <div class="line total"><span>Total</span><span id="total">S/ 946.50</span></div>
+            <p class="paypal-info">Paga en 4 cuotas sin interés de S/ 236.63</p>
+            <button class="checkout" onclick="procesarPago()">Proceder al pago</button>
+            <div class="or">— o —</div>
+            <button class="paypal" onclick="selectMetodo('PayPal')">PayPal</button>
+            <button class="paylater" onclick="selectMetodo('Pay Later')">Pagar después</button>
+        </div>
+    </div>
+
+    <script src="scriptPasarela.js"></script>
+</body>
+
+</html>
