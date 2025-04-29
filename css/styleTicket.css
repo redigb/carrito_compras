@@ -1,0 +1,80 @@
+body {
+    font-family: Arial, sans-serif;
+    background: #f3f3f3;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+  }
+
+  .ticket {
+    background: white;
+    padding: 30px 40px;
+    border-radius: 15px;
+    box-shadow: 0 8px 20px rgba(0,0,0,0.15);
+    text-align: center;
+    animation: fadeIn 0.6s ease-out;
+  }
+
+  @keyframes fadeIn {
+    from { opacity: 0; transform: translateY(-20px); }
+    to { opacity: 1; transform: translateY(0); }
+  }
+
+  .checkmark {
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+    display: inline-block;
+    border: 5px solid #4CAF50;
+    position: relative;
+    margin-bottom: 20px;
+  }
+
+  .checkmark::after {
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 20px;
+    height: 40px;
+    border-right: 5px solid #4CAF50;
+    border-bottom: 5px solid #4CAF50;
+    transform: translate(-50%, -60%) rotate(45deg);
+    animation: drawCheck 0.5s ease-out forwards;
+  }
+
+  @keyframes drawCheck {
+    0% {
+      width: 0;
+      height: 0;
+    }
+    100% {
+      width: 20px;
+      height: 40px;
+    }
+  }
+
+  .ticket h2 {
+    color: #2a6cff;
+    margin-bottom: 10px;
+  }
+
+  .ticket p {
+    margin: 5px 0;
+    font-size: 16px;
+  }
+
+  .ticket .bold {
+    font-weight: bold;
+  }
+
+  .id-pago {
+    background: #f0f0f0;
+    border-radius: 8px;
+    padding: 10px;
+    margin-top: 10px;
+    font-family: monospace;
+    font-size: 14px;
+    color: #333;
+  }
