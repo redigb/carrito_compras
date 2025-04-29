@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ZAPATILLA||STOCK</title>
+    <link rel="stylesheet" href="vista/css/style_product.css">
+</head>
+
+<body>
+    <div class="container">
+        <div class="breadcrumb">
+            <a href="#">Inicio</a> > <a href="#">Zapatillas</a> > <a href="#">Zapatillas Mujer</a>
+        </div>
+
+        <div class="product-grid">
+            <!-- ZAPATILLA STOCK 1 -->
+            <div class="product-card" onclick="showProductDetail(1)">
+                <div class="product-image">
+                    <div class="brand-logo">CONVERSE</div>
+                    <img src="vista/imag_hombre/Colorful_Suede_Guinda_Mujer.png" alt="Converse Colorful Suede Guinda">
+                </div>
+                <div class="product-info">
+                    <div class="product-brand">CONVERSE</div>
+                    <div class="product-name">Zapatilla Urbana Colorful Suede Guinda Mujer</div>
+                    <div class="product-vendor">Trendy Vibes</div>
+                    <div class="product-price">
+                        <span class="current-price">S/199</span>
+                        <span class="original-price">S/349.90</span>
+                        <span class="discount">43%</span>
+                    </div>
+                    <div class="delivery-info">En Stock</div>
+                    <div class="delivery-info">Originales</div>
+                    <div class="delivery-info">Envios a todo el Perù</div>
+                    <button class="add-to-cart">Agregar al Carro</button>
+                </div>
+            </div>
+
+            <!-- ZAPATILLA 2  -->
+            <div class="product-card" onclick="showProductDetail(2)">
+                <div class="product-image">
+                    <div class="brand-logo">NIKE</div>
+                    <img src="vista/imag_hombre/Zapatilla_Running_Air.png" alt="Nike Air Max Azul">
+                </div>
+                <div class="product-info">
+                    <div class="product-brand">NIKE</div>
+                    <div class="product-name">Zapatilla Running Air Max Azul Marino Mujer</div>
+                    <div class="product-vendor">Trendy Vibes</div>
+                    <div class="product-price">
+                        <span class="current-price">S/279</span>
+                        <span class="original-price">S/399.90</span>
+                        <span class="discount">30%</span>
+                    </div>
+                    <div class="delivery-info">En Stock</div>
+                    <div class="delivery-info">Originales</div>
+                    <div class="delivery-info">Envios a todo el Perù</div>
+                    <button class="add-to-cart">Agregar al Carro</button>
+                </div>
+            </div>
+
+            <!-- ZAPATILLA 3 -->
+            <div class="product-card" onclick="showProductDetail(3)">
+                <div class="product-image">
+                    <div class="brand-logo">ADIDAS</div>
+                    <img src="vista/imag_hombre/Zapatilla_Deportiva_Ultraboost.png" alt="Adidas Ultraboost Blanca">
+                </div>
+                <div class="product-info">
+                    <div class="product-brand">ADIDAS</div>
+                    <div class="product-name">Zapatilla Deportiva Ultraboost 21 Blanca Mujer</div>
+                    <div class="product-vendor">Trendy Vibes</div>
+                    <div class="product-price">
+                        <span class="current-price">S/329</span>
+                        <span class="original-price">S/459.90</span>
+                        <span class="discount">28%</span>
+                    </div>
+                    <div class="delivery-info">Ultimos Pares</div>
+                    <div class="delivery-info">Originales</div>
+                    <div class="delivery-info">Envios a todo el Perù</div>
+                    <button class="add-to-cart">Agregar al Carro</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- MODAL PARA CADA ZAPATILLA -->
+    <div id="productModal" class="product-modal">
+        <div class="modal-content">
+            <div class="modal-header">
+                <div class="breadcrumb">
+                    <a href="#">Home</a> > <a href="#">Zapatillas</a> > <a href="#">Zapatillas Mujer</a>
+                </div>
+                <span class="close-modal" onclick="closeModal()">&times;</span>
+            </div>
+
+            <div class="product-detail">
+                <div class="detail-image-container">
+                    <div class="brand-logo" id="modalBrand">CONVERSE</div>
+                    <div class="image-gallery">
+                        <div class="main-image-container">
+                            <img id="mainProductImage" src="" alt="Imagen del producto">
+                        </div>
+                        <div class="thumbnail-column" id="thumbnailContainer"></div>
+                    </div>
+                </div>
+
+                <div class="detail-info">
+                    <div class="detail-brand" id="modalBrandName">CONVERSE</div>
+                    <div class="detail-name" id="modalProductName">Zapatilla Urbana Colorful Suede Guinda Mujer Converse
+                    </div>
+
+                    <div class="rating">★★★★★ (0) <a href="#">Calificar</a></div>
+
+                    <div class="vendor" id="modalVendor">Vendido por Trendy Vibes</div>
+
+                    <div class="size-selector">
+                        <div>Talla:</div>
+                        <div class="size-options" id="sizeOptions"></div>
+                        <div class="size-guide">Tabla de tallas</div>
+                    </div>
+
+                    <div class="color-selector" id="colorSelector" style="display: none;">
+                        <div>Color:</div>
+                        <div class="color-options" id="colorOptions"></div>
+                    </div>
+
+                    <div class="delivery-options">
+                        <div class="delivery-option">
+                            <span class="delivery-icon">✓</span> Dilivery
+                        </div>
+                        <div class="delivery-option">
+                            <span class="delivery-icon">✓</span> Precios de calidad
+                        </div>
+                        <div class="delivery-option">
+                            <span class="delivery-icon">✓</span> Stock en tienda
+                        </div>
+                    </div>
+
+                    <div class="detail-price">
+                        <span class="current-price" id="modalCurrentPrice">S/199</span>
+                        <span class="original-price" id="modalOriginalPrice">S/349.90</span>
+                    </div>
+
+                    <div class="delivery-info" id="deliveryTime1">Calidad</div>
+                    <div class="delivery-info" id="deliveryTime2">Originales</div>
+                    <div class="delivery-info" id="deliveryTime3">Envíos a todo el Perù</div>
+
+                    <div class="quantity-selector">
+                        <div class="quantity-control">
+                            <button class="quantity-btn">-</button>
+                            <input type="text" class="quantity-input" value="1">
+                            <button class="quantity-btn">+</button>
+                        </div>
+                        <div class="max-quantity">Máximo 12 unidades.</div>
+                    </div>
+
+                    <button class="buy-btn">COMPRA CON TU TARJETA O EFECTIVO</button>
+
+                    <div class="policy-info">Paga y ahorra más de S/ 10.00 en Trendy Vibes</div>
+                    <div class="guarantee">Devolver es fácil y gratis<br>Conoce nuestra Satisfacción garantizada</div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+
+</body>
+<script src="vista/js/script_modal.js"></script>
+</html>
